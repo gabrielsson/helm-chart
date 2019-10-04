@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  pizza-menu:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-10-04T11:54:51.593196+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 43d1a2abb4d008cd337e365fa31bf47b4c7f9e6daf039fd895b46f3d49a36cd3
+    name: pizza-menu
+    urls:
+    - https://gabrielsson.github.io/helm-chart/pizza-menu-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-10-04T11:54:51.592764+02:00"
