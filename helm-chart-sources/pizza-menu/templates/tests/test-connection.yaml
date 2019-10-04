@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "pizza-menu.fullname" . }}-test-connection"
+  labels:
+{{ include "pizza-menu.labels" . | indent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "pizza-menu.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
