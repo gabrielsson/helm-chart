@@ -22,9 +22,10 @@ spec:
     {{- end }}
       
       containers:
-      
         - name: {{ .Chart.Name }}
           env: 
+            - name: SERVER_SERVLET_CONTEXT_PATH
+              value: /api
             - name: PIZZA_NAME_ENDPOINT
               value: "http://{{ .Release.Name }}-name-creator.{{ .Release.Name }}.svc:8080"
             - name: SERVER_PORT
@@ -39,6 +40,14 @@ spec:
               value: INFO
           image: "{{ .Values.facade.image.repository }}:{{ .Values.facade.image.tag }}"
           imagePullPolicy: {{ .Values.facade.image.pullPolicy }}
+          readinessProbe:
+            httpGet:
+              path: /api/actuator/health
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /api/actuator/health
+              port: 8080
           ports:
             - name: http
               containerPort: 8080

@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fanout-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: {{ .Release.Name }}-frontend
+          servicePort: 8080
+      - path: /api/*
+        backend:
+          serviceName: {{ .Release.Name }}-facade
+          servicePort: 8080
