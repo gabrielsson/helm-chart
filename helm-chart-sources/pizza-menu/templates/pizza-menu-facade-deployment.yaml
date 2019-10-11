@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-facade
+  name: {{ include "pizza-menu.name" . }}-facade
   labels:
 {{ include "pizza-menu.labels" . | indent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ .Release.Name }}-facade
-      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/name: {{ include "pizza-menu.name" . }}-facade
+      app.kubernetes.io/instance: {{ include "pizza-menu.name" . }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ .Release.Name }}-facade
-        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/name: {{ include "pizza-menu.name" . }}-facade
+        app.kubernetes.io/instance: {{ include "pizza-menu.name" . }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -24,16 +24,14 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           env: 
-            - name: SERVER_SERVLET_CONTEXT_PATH
-              value: /api
             - name: PIZZA_NAME_ENDPOINT
-              value: "http://{{ .Release.Name }}-name-creator.{{ .Release.Name }}.svc:8080"
+              value: "http://{{ include "pizza-menu.name" . }}-name-creator.{{ include "pizza-menu.name" . }}.svc:8080"
             - name: SERVER_PORT
               value: {{ .Values.service.port | quote}}
             - name: SPRING_APPLICATION_NAME
-              value: {{ .Release.Name }}-facade
+              value: {{ include "pizza-menu.name" . }}-facade
             - name: JAEGER_SERVICE_NAME
-              value: {{ .Release.Name }}-facade
+              value: {{ include "pizza-menu.name" . }}-facade
             - name: OPENTRACING_JAEGER_UDPSENDER_HOST
               value: jaeger-simplest-agent.default
             - name: LOGGING_LEVEL_ROOT
@@ -42,11 +40,11 @@ spec:
           imagePullPolicy: {{ .Values.facade.image.pullPolicy }}
           readinessProbe:
             httpGet:
-              path: /api/actuator/health
+              path: /actuator/health
               port: 8080
           livenessProbe:
             httpGet:
-              path: /api/actuator/health
+              path: /actuator/health
               port: 8080
           ports:
             - name: http
