@@ -32,8 +32,6 @@ spec:
               value: {{ include "pizza-menu.name" . }}-facade
             - name: JAEGER_SERVICE_NAME
               value: {{ include "pizza-menu.name" . }}-facade
-            - name: OPENTRACING_JAEGER_UDPSENDER_HOST
-              value: jaeger-simplest-agent.default
             - name: LOGGING_LEVEL_ROOT
               value: INFO
           image: "{{ .Values.facade.image.repository }}:{{ .Values.facade.image.tag }}"

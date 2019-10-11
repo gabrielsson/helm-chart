@@ -31,8 +31,6 @@ spec:
               value: {{ include "pizza-menu.name" . }}-name-creator
             - name: JAEGER_SERVICE_NAME
               value: {{ include "pizza-menu.name" . }}-name-creator
-            - name: OPENTRACING_JAEGER_UDPSENDER_HOST
-              value: jaeger-simplest-agent.default
             - name: LOGGING_LEVEL_ROOT
               value: INFO
           image: "{{ .Values.name.image.repository }}:{{ .Values.name.image.tag }}"
