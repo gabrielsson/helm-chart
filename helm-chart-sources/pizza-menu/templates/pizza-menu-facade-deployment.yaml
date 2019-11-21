@@ -25,7 +25,7 @@ spec:
         - name: {{ .Chart.Name }}
           env: 
             - name: PIZZA_NAME_ENDPOINT
-              value: "http://{{ include "pizza-menu.name" . }}-name-creator.{{ include "pizza-menu.name" . }}.svc:8080"
+              value: "http://{{ include "pizza-menu.name" . }}-name-creator.{{ .Release.Namespace }}.svc:8080"
             - name: SERVER_PORT
               value: {{ .Values.service.port | quote}}
             - name: SPRING_APPLICATION_NAME
