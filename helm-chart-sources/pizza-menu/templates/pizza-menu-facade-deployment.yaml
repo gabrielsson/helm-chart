@@ -38,11 +38,11 @@ spec:
           imagePullPolicy: {{ .Values.facade.image.pullPolicy }}
           readinessProbe:
             httpGet:
-              path: /actuator/health
+              path: /health
               port: 8080
           livenessProbe:
             httpGet:
-              path: /actuator/health
+              path: /health
               port: 8080
           ports:
             - name: http

@@ -29,8 +29,6 @@ spec:
               value: {{ .Values.service.port | quote}}
             - name: SPRING_APPLICATION_NAME
               value: {{ include "pizza-menu.name" . }}-name-creator
-            - name: JAEGER_SERVICE_NAME
-              value: {{ include "pizza-menu.name" . }}-name-creator
             - name: LOGGING_LEVEL_ROOT
               value: INFO
           image: "{{ .Values.name.image.repository }}:{{ .Values.name.image.tag }}"
