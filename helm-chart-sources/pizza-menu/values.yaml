@@ -4,6 +4,12 @@
 
 replicaCount: 1
 
+frontend:
+  image:
+    repository: gabrielsson/pizza-menu-frontend
+    tag: latest
+    pullPolicy: Always
+
 facade:
   image:
     repository: gabrielsson/pizza-menu-facade
