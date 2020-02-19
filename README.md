@@ -18,4 +18,4 @@ helm search repo gabrielsson
 helm upgrade -n pizza-menu pizza-menu  gabrielsson/pizza-menu --install
 ```
 
-![Pizza Menu Generator](/docs/pizza.gif)
+![Pizza Menu Generator](docs/pizza.gif)
