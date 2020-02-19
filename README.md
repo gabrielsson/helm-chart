@@ -18,10 +18,4 @@ helm search repo gabrielsson
 helm upgrade -n pizza-menu pizza-menu  gabrielsson/pizza-menu --install
 ```
 
-To see what it does
-
-```
-kubectl -n pizza-menu port-forward service/pizza-menu-facade 8080
-
-open http://localhost:8080
-```
+![Pizza Menu Generator](/docs/pizza.gif)
