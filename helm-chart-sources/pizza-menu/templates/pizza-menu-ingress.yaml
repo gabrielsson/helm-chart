@@ -17,9 +17,14 @@ spec:
   rules:
     - http:
         paths:
-          - backend:
-              serviceName: {{ include "pizza-menu.name" . }}-facade
-              servicePort: 8080
-            path: /graphql
+        - path: /ingredients
+          backend: 
+            serviceName: {{ include "pizza-menu.name" . }}-facade
+            servicePort: 8080
+        - path: /pizzas
+          backend: 
+            serviceName: {{ include "pizza-menu.name" . }}-facade
+            servicePort: 8080
+
 {{- end }}
 

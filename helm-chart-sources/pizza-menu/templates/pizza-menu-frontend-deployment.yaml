@@ -24,7 +24,7 @@ spec:
                 - name: {{ .Chart.Name }}
                   env:
                       - name: VUE_APP_PIZZA_API
-                        value: "/graphql"
+                        value: "http://generate.pizza"
                   image: "{{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}"
                   imagePullPolicy: {{ .Values.frontend.image.pullPolicy }}
                   ports:
