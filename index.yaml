@@ -3,7 +3,16 @@ entries:
   pizza-menu:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.605236+01:00"
+    created: "2020-02-24T21:58:08.229613+01:00"
+    description: A Helm chart for Kubernetes
+    digest: c85c399d98ef2418b347e155433d315ca572aeef066df8ca4b7984591f791b0a
+    name: pizza-menu
+    urls:
+    - https://gabrielsson.github.io/helm-chart/pizza-menu-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-02-24T21:58:08.229082+01:00"
     description: A Helm chart for Kubernetes
     digest: c2ccabfac91841d3eed889db55afd1ece9c02e022bd931fb7f8acd2203e83f52
     name: pizza-menu
@@ -12,7 +21,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.604758+01:00"
+    created: "2020-02-24T21:58:08.228194+01:00"
     description: A Helm chart for Kubernetes
     digest: 0e1bbc89634ef42b240a8ba1e7b43c71ede66657245133034eb47948616247b6
     name: pizza-menu
@@ -21,7 +30,7 @@ entries:
     version: 0.1.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.604311+01:00"
+    created: "2020-02-24T21:58:08.226963+01:00"
     description: A Helm chart for Kubernetes
     digest: f3324b46c71e2421fb49c966d811eeeade81cd2dccc43a5f7b2ba43088d55a98
     name: pizza-menu
@@ -30,7 +39,7 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.603852+01:00"
+    created: "2020-02-24T21:58:08.225356+01:00"
     description: A Helm chart for Kubernetes
     digest: 3d54f5d7a6a2a9ad80cd508d9a36cc626028d704f4d9307e9d4385b7271374d8
     name: pizza-menu
@@ -39,7 +48,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.603429+01:00"
+    created: "2020-02-24T21:58:08.224375+01:00"
     description: A Helm chart for Kubernetes
     digest: 0d819605cc2d796a447f039e76b2f563ffbeb7dedf1d230c732d64cb120077db
     name: pizza-menu
@@ -48,7 +57,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.603059+01:00"
+    created: "2020-02-24T21:58:08.223606+01:00"
     description: A Helm chart for Kubernetes
     digest: a48fab871b21185edbe129154b1af042250d04428eb5024b8a7d0c09739f1ace
     name: pizza-menu
@@ -57,7 +66,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.602675+01:00"
+    created: "2020-02-24T21:58:08.221807+01:00"
     description: A Helm chart for Kubernetes
     digest: bb57f2869db137984930164daad18d207f807204b6686b5af97733bfa44c2e5a
     name: pizza-menu
@@ -66,7 +75,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.602273+01:00"
+    created: "2020-02-24T21:58:08.219466+01:00"
     description: A Helm chart for Kubernetes
     digest: 697fa98c98408fc4a7cb218a94b01f33a86074eb59469ed7a6702d3b8595c4e3
     name: pizza-menu
@@ -75,7 +84,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.601876+01:00"
+    created: "2020-02-24T21:58:08.218768+01:00"
     description: A Helm chart for Kubernetes
     digest: 5eadef0b7cca41f17b4081f1b767553213b809061a7d9de2c20257b705236c1a
     name: pizza-menu
@@ -84,11 +93,11 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-02-19T13:53:02.601542+01:00"
+    created: "2020-02-24T21:58:08.217437+01:00"
     description: A Helm chart for Kubernetes
     digest: 43d1a2abb4d008cd337e365fa31bf47b4c7f9e6daf039fd895b46f3d49a36cd3
     name: pizza-menu
     urls:
     - https://gabrielsson.github.io/helm-chart/pizza-menu-0.1.0.tgz
     version: 0.1.0
-generated: "2020-02-19T13:53:02.600546+01:00"
+generated: "2020-02-24T21:58:08.216286+01:00"
