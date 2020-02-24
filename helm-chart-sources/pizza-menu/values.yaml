@@ -19,7 +19,7 @@ facade:
 name:
   image:
     repository: gabrielsson/pizza-name-creator
-    tag: 2.0.0
+    tag: 2.0.1
     pullPolicy: Always
 
 ingress:
